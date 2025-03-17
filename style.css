@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 ::after,
 ::before {
@@ -15,6 +16,59 @@ body {
 img {
   display: block;
 }
+
+.foto {
+  flex: none;
+}
+
+.galerie {
+  display: flex;
+  /* flex-direction: column;
+  flex-wrap: wrap; */
+  flex-flow: column wrap;
+}
+
+@media (min-width: 500px) {
+  .galerie {
+    flex-direction: row;
+  }
+
+  .foto {
+    width: calc(100% / 2);
+  }
+}
+
+@media (min-width: 650px) {
+  .galerie {
+    flex-direction: row;
+  }
+
+  .foto {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 800px) {
+  .galerie {
+    flex-direction: row;
+  }
+
+  .foto {
+    width: calc(100% / 4);
+  }
+}
+
+@media (min-width: 1000px) {
+  .galerie {
+    flex-direction: row;
+  }
+
+  .foto {
+    width: calc(100% / 6);
+  }
+}
+
+
 
 /*
 Zařiď, aby se fotogalerie měnila tak, že pro různé
